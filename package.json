@@ -1,6 +1,8 @@
 {
-  "name": "quiz",
+  "name": "quiz-jcf",
   "version": "0.0.0",
+  "description": "Proyecto Quiz",
+  "main": "app.js",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -23,6 +25,8 @@
     "pg": "^4.1.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^2.0.0-rc4",
-    "serve-favicon": "~2.1.3",
-  }
+    "serve-favicon": "~2.1.3"
+  },
+  "author": "Jose Antonio",
+  "license": "MIT"
 }
