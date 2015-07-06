@@ -1,5 +1,14 @@
+<h3>Buscador de preguntas</h3>
+<form method="get" action="/quizes">
+    <input type="text" name="search" placeholder="buscar pregunta" required/>
+    <input type="submit" value="Buscar"/>
+</form>
+
 <table>
+<caption>Lista de preguntas:</caption>
 <% var i; for (i=0; i < quizes.length; i++) { %>
    <tr><td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td></tr>
 <% } %>
 </table>
+
+<% if(quizes.length == 0) {%><p>No encontrado</p><% } %>
