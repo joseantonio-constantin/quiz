@@ -10,6 +10,10 @@ header, nav, section, footer { background: #eee; text-align: center;}
 nav span             { margin: 0px 10px 0px 0px;}
 
 #ErrorMsgs					 { color: #f61; font-size: smaler;}
-.tema {text-transform: capitalize;}
-table {text-align: left; margin: 20px auto;}
-td:nth-child(2) {padding: 0px 20px;}
+/* Autor */
+#lista-preg {margin: 20px auto; text-align: left; width:auto !important;}
+#lista-preg td {vertical-align: middle;}
+#lista-preg td:nth-child(2) {padding-right: 50px;}
+#notFound {margin-top: 10px;}
+a > button {color: black;}
+div.jumbotron {background-color: transparent;}

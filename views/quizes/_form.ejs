@@ -1,17 +1,31 @@
-<label for="preg" class="rem">Pregunta:</label>
-<input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/><br>
-<label for="resp" class="rem">Respuesta:</label>
-<input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/><br>
+<div class="form-group">
+  <label for="tema" class="col-sm-2 control-label rem">Tema:</label>
+  <div class="col-sm-10">
+    <select class="form-control text-capitalize" name="quiz[tema]">
+      <option value="<%= quiz.tema %>" selected><%= quiz.tema %></option>
+      <option value="humanidades">Humanidades</option>
+      <option value="ocio">Ocio</option>
+      <option value="ciencia">Ciencia</option>
+      <option value="tecnologia">Tecnología</option>
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+</div>
 
-<label for="tema" class="rem">Tema:</label>
-<select class="tema" name="quiz[tema]">
-  <option value="<%= quiz.tema %>" selected><%= quiz.tema %></option>
-  <option value="humanidades">Humanidades</option>
-  <option value="ocio">Ocio</option>
-  <option value="ciencia">Ciencia</option>
-  <option value="tecnologia">Tecnología</option>
-  <option value="otro">Otro</option>
-</select><br>
+<div class="form-group">
+  <label for="preg" class="col-sm-2 control-label rem">Pregunta:</label>
+  <div class="col-sm-10">
+    <input type="text" id="preg" class="form-control" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="resp" class="col-sm-2 control-label rem">Respuesta:</label>
+  <div class="col-sm-10">
+    <input type="text" id="resp" class="form-control" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/>
+  </div>
+</div>
 
-<a href="/quizes"><button type="button">Cancelar</button></a>
-<input type="submit" value="Salvar"/>
+<div class="form-group">
+  <a href="/quizes"><button type="button" class="btn btn-default">Cancelar</button></a>
+  <input type="submit" class="btn btn-default" value="Salvar"/>
+</div>
