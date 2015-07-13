@@ -1,13 +1,13 @@
 <h3>Buscador de preguntas</h3>
 <form class="form-inline" method="get" action="/quizes">
-  <div class="col-lg-6">
+  <div class="col-sm-12 col-lg-12">
     <div class="input-group">
       <input type="text" name="search" class="form-control" placeholder="buscar pregunta" required/>
       <span class="input-group-btn">
         <input type="submit" class="btn btn-info" value="Buscar"/>
       </span>
     </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
+  </div>
 </form>
 
 <div id="notFound" class="alert alert-danger alert-dismissible hidden" role="alert">
@@ -17,7 +17,7 @@
   <strong>No encontrado!</strong> Compruebe su búsqueda y vuelva a intentarlo.
 </div><!-- /alert -->
 
-<div id="ocultar">
+<div id="ocultar" class="col-sm-12 col-lg-12">
 <table id="lista-preg" class="table table-condensed">
    <caption>Lista de Quizzes:</caption>
    <tr><th>Tema</th><th>Pregunta</th><th>&nbsp;</th><th>&nbsp;</th></tr>
@@ -36,7 +36,7 @@
    </tr>
 <% } %>
 </table>
-<a href="/quizes/new"><button type="button" class="btn btn-primary">Crear pregunta</button></a>
+<p><a href="/quizes/new"><button type="button" class="btn btn-primary">Crear pregunta</button></a></p>
 </div>
 
 <script>

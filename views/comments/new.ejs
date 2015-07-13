@@ -1,0 +1,8 @@
+<p>Añadir comentario: </p>
+
+<form class="form-horizontal" method="post" action="/quizes/<%=quizid%>/comments/">
+  <div class="form-group">
+    <input type="text" id="comment" class="form-control" name="comment[texto]" placeholder="Nuevo comentario" required/>
+    <button type="submit" class="btn btn-default">Enviar</button>
+  </div>
+</form>
