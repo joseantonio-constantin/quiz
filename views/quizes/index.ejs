@@ -20,11 +20,12 @@
 <div id="ocultar" class="col-sm-12 col-lg-12">
 <table id="lista-preg" class="table table-condensed">
    <caption>Lista de Quizzes:</caption>
-   <tr><th>Tema</th><th>Pregunta</th><th>&nbsp;</th><th>&nbsp;</th></tr>
+   <tr><th>Tema</th><th>Pregunta</th><%if(session.user){%><th>&nbsp;</th><th>&nbsp;</th><%}%></tr>
 <% var i; for (i=0; i < quizes.length; i++) { %>
    <tr>
     <td class="text-capitalize"><%= quizes[i].tema %></td>
     <td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td>
+    <%if(session.user){%>
     <td><a href="quizes/<%= quizes[i].id %>/edit"><button type="button" class="btn btn-default">Editar</button></a></td>
     <td>
       <form method="post" action="quizes/<%= quizes[i].id %>?_method=delete">
@@ -33,10 +34,13 @@
         </button>
       </form>
     </td>
+    <%}%>
    </tr>
 <% } %>
 </table>
+<%if(session.user){%>
 <p><a href="/quizes/new"><button type="button" class="btn btn-primary">Crear pregunta</button></a></p>
+<%}%>
 </div>
 
 <script>

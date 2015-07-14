@@ -15,7 +15,7 @@ nav span             { margin: 0px 10px 0px 0px;}
 /* Autor */
 #lista-preg {margin: 20px auto; text-align: left; width:auto !important;}
 #lista-preg td {vertical-align: middle;}
-#lista-preg td:nth-child(2) {padding-right: 50px;}
+#lista-preg td:nth-child(3) {padding-left: 50px;}
 #notFound {margin-top: 60px;}
 a > button {color: black;}
 div.jumbotron {background-color: transparent;}
