@@ -17,8 +17,8 @@
   <strong>No encontrado!</strong> Compruebe su búsqueda y vuelva a intentarlo.
 </div><!-- /alert -->
 
-<div id="ocultar" class="col-sm-12 col-lg-12">
-<table id="lista-preg" class="table table-condensed">
+<div id="ocultar" class="table-responsive col-sm-12 col-lg-12">
+<table id="lista-preg" class="table table-striped">
    <caption>Lista de Quizzes:</caption>
    <tr><th>Tema</th><th>Pregunta</th><%if(session.user){%><th>&nbsp;</th><th>&nbsp;</th><%}%></tr>
 <% var i; for (i=0; i < quizes.length; i++) { %>
