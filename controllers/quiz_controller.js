@@ -103,13 +103,3 @@ exports.destroy = function(req, res) {
     res.redirect('/quizes');
   }).catch(function(error){next(error)});
 };
-
-// GET /author
-exports.author = function(req, res) {
-  res.render('author', {
-    autor: 'José Antonio Constantin',
-    foto: 'autor.jpg',
-    video: 'sample.mp4',
-    errors: []
-    });
-};

@@ -4,6 +4,8 @@ var router = express.Router();
 var quizController = require('../controllers/quiz_controller');
 var commentController = require('../controllers/comment_controller');
 var sessionController = require('../controllers/session_controller');
+var statController = require('../controllers/stat_controller');
+var authorController = require('../controllers/author_controller');
 
 // Página de entrada (home page)
 router.get('/', function(req, res) {
@@ -34,6 +36,10 @@ router.get('/quizes/:quizId(\\d+)/comments/new', commentController.new);
 router.post('/quizes/:quizId(\\d+)/comments', commentController.create);
 router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish', sessionController.loginRequired, commentController.publish);//GET funciona, pero el interfaz uniforme indica usar PUT en este caso
 
-router.get('/author', quizController.author);
+// Definición de rutas de estadisticas
+router.get('/quizes/statistics', statController.index);
+
+// Página del Autor
+router.get('/author', authorController.index);
 
 module.exports = router;
