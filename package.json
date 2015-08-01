@@ -1,6 +1,6 @@
 {
   "name": "quiz-jcf",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Proyecto Quiz",
   "main": "app.js",
   "private": true,
